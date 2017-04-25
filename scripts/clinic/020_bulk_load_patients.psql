@@ -1,0 +1,4 @@
+-- bulk copy people
+-- run the same way prior examples run
+-- disply similarly as well: SELECT * FROM patients LIMIT 25;
+\copy patients (family_name, given_name, gender, height, weight, born_on) FROM 'data/people.csv' WITH (FORMAT csv, HEADER true)

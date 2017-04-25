@@ -1,0 +1,4 @@
+-- \i scripts/cookbook/020_bulk_load_ingredients.psql
+-- SELECT * FROM ingredients LIMIT 25
+
+\copy ingredients (name, unit) FROM 'data/ingredients.csv' WITH (FORMAT csv, HEADER true)

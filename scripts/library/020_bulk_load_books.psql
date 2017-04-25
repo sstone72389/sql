@@ -1,0 +1,4 @@
+-- \i scripts/cookbook/010_insert_into_cookbook.sql
+-- to display: SELECT * FROM books LIMIT 10;
+
+\copy books (title, author, original_language, first_published) FROM 'data/books.csv' WITH (FORMAT csv, HEADER true)
